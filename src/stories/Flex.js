@@ -36,10 +36,22 @@ storiesOf('Core/Flex', module)
     return (
       <Provider>
         <Box m={3}>
-          <Flex flexDirection='column'>
-            <Box style={{ height: 200, width: 200 }} bg='red' />
-            <Box style={{ height: 200, width: 200 }} bg='blue' />
-            <Box style={{ height: 200, width: 200 }} bg='green' />
+          <Flex flexDirection={['column', 'row', 'column']}>
+            <Box
+              width={[1 / 3, 1 / 2, 1 / 3]}
+              style={{ height: 200 }}
+              bg='red'
+            />
+            <Box
+              width={[1 / 3, 1 / 2, 1 / 3]}
+              style={{ height: 200 }}
+              bg='blue'
+            />
+            <Box
+              width={[1 / 3, 1 / 2, 1 / 3]}
+              style={{ height: 200 }}
+              bg='green'
+            />
           </Flex>
         </Box>
       </Provider>
